@@ -1,0 +1,425 @@
+import type { ChapterData } from '../types';
+import { TRUTH_BULLETS } from '../bullets';
+
+export const chapter4: ChapterData = {
+  id: 4,
+  numberLabel: '第4話',
+  yearLabel: '三年生編・春〜初夏',
+  title: 'フェイカツ・グレートチェーン・二年半越しの挙手',
+  subtitle: '倉石の5段階モデル論破＆砂糖東洋が手を挙げた火曜三限',
+  coverBg: 'bg_geography_board',
+  featuredChar: 'satou',
+  featuredExpression: 'kao_ageta',
+  accentColor: '#f59e0b',
+  initialBullets: [
+    TRUTH_BULLETS.ground_never_forgets,
+    TRUTH_BULLETS.gen_honshitsu_paradox,
+    TRUTH_BULLETS.river_terrace_topdown,
+  ],
+  steps: [
+    {
+      type: 'dialogue',
+      bg: 'bg_classroom_day',
+      bgm: 'bgm_comedy',
+      particleMood: 'sakura',
+      stage: [
+        { charId: 'ryoma', expression: 'niyari', position: 'left' },
+        { charId: 'mie', expression: 'iradachi_shinken', position: 'right' },
+      ],
+      speaker: 'narrator',
+      text: '四月、最後の全員続投。三年B組も同じ四十人。両馬二郎は「フェイカツ（偽のヘイカツ）」というアカウント名で受験情報掲示板の中学生たちを混乱させ続けていた。',
+      overlay: {
+        kind: 'bbs',
+        boardName: '受験情報掲示板・桐葉高校 質問スレ',
+        threadTitle: '【桐葉高】理数科の雰囲気を教えてください',
+        posts: [
+          {
+            num: '1',
+            author: 'フェイカツ',
+            text: '桐葉高校には地図を三年間見せ続ける教師がいる。受験生よ、来い。等高線が人間に見えるようになる。偏差値は知らん。✝',
+            highlight: true,
+          },
+          {
+            num: '2',
+            author: '内緒さん（中3）',
+            text: '✝って何ですか？ 何も伝わってこないです',
+          },
+          {
+            num: '3',
+            author: 'フェイカツ',
+            text: '伝わらなくていい。見つからないこと自体が✝本質✝だ。✝',
+            highlight: true,
+          },
+          {
+            num: '4',
+            author: '内緒さん（中3）',
+            text: 'もういいです',
+          },
+        ],
+      },
+      sfx: 'notify',
+    },
+    {
+      type: 'dialogue',
+      stage: [
+        { charId: 'kuraishi', expression: 'hokorashige', position: 'left' },
+        { charId: 'mie', expression: 'ha', position: 'right' },
+      ],
+      sfx: 'paper_flip',
+      speaker: 'kuraishi',
+      text: '先輩方、最終年度です！ 僕が編纂した『✝本質✝年鑑 速報値』および『✝本質✝入門ガイド』をお持ちしました！ 三重先輩は「否定の守護者」として記載してあります！',
+      overlay: {
+        kind: 'almanac',
+        title: '✝本質✝年鑑 速報値（倉石暁 編）',
+        rows: [
+          { label: '両馬 二郎（創始者）', value: '✝本質✝発言：782回', note: 'うちフェイカツ名義43回' },
+          { label: '三重 県臣（否定の守護者）', value: '「は？」発言：420回（推定）', note: 'うち両馬宛312回' },
+          { label: '砂糖 東洋（沈黙の観察者）', value: '「うるさい」：153回', note: 'うち三重宛119回' },
+          { label: '数理 零（面白さの王）', value: '「面白い」：346回', note: '偏差値85・全科目首席' },
+          { label: '召野 カイト（人妻の使徒）', value: '英語学年：5位（125人抜き）', note: 'ALTと流暢に会話' },
+        ],
+      },
+    },
+    {
+      type: 'dialogue',
+      stage: [
+        { charId: 'kuraishi', expression: 'nekkyou', position: 'left', dim: true },
+        { charId: 'mie', expression: 'ha', position: 'right' },
+      ],
+      sfx: 'question',
+      speaker: 'mie',
+      text: 'は？ 統計的に補正するな！ 誰が「否定の守護者」だ！',
+    },
+    {
+      type: 'dialogue',
+      stage: [
+        { charId: 'kuraishi', expression: 'chousa_shinken', position: 'left' },
+        { charId: 'mie', expression: 'iradachi_shinken', position: 'right', dim: true },
+      ],
+      speaker: 'kuraishi',
+      text: '四百二十一回目です！ 誰も否定しなかったら✝本質✝は拡散しすぎて崩壊します。三重先輩の「は？」こそ✝本質✝の防波堤なのです！',
+    },
+    {
+      type: 'dialogue',
+      bg: 'bg_geography_board',
+      bgm: 'bgm_emotional',
+      particleMood: 'dust',
+      stage: [
+        { charId: 'katsuya', expression: 'tsuujou', position: 'center' },
+      ],
+      speaker: 'narrator',
+      text: '――そして、火曜三限。地理。三年目。勝也は一年の最初にも、二年の最初にも出した「まったく同じ地形図」を教壇に広げた。',
+    },
+    {
+      type: 'dialogue',
+      stage: [
+        { charId: 'katsuya', expression: 'tsuujou', position: 'center' },
+      ],
+      speaker: 'katsuya',
+      text: '三回目だ。同じ地図。――一年目と、同じに見えるか？',
+    },
+    {
+      type: 'dialogue',
+      stage: [
+        { charId: 'satou', expression: 'kao_ageta', position: 'center' },
+      ],
+      flash: 'white',
+      sfx: 'impact_metal',
+      speaker: 'narrator',
+      text: 'その瞬間、教室の空気が裂けた。窓際最後列――二年半ずっとスマホゲーム画面を見続けていた砂糖東洋の右手が、真っ直ぐに上がったのだ！',
+    },
+    {
+      type: 'dialogue',
+      stage: [
+        { charId: 'satou', expression: 'me_hikari_koraeru', position: 'left' },
+        { charId: 'katsuya', expression: 'odoroki', position: 'right' },
+      ],
+      addBullet: TRUTH_BULLETS.satou_third_map,
+      sfx: 'clue_get',
+      speaker: 'satou',
+      text: '先生。この等高線のここ、河岸段丘ですよね。上の段に集落があるのは水害を避けるためで、下は水を使える田んぼ。間隔の狭い急斜面は段丘崖で、崖沿いに道があるのは湧水が出やすいからじゃないですか。',
+    },
+    {
+      type: 'dialogue',
+      stage: [
+        { charId: 'satou', expression: 'soppo', position: 'left', dim: true },
+        { charId: 'katsuya', expression: 'hareyaka_emi', position: 'right' },
+      ],
+      speaker: 'narrator',
+      text: '勝也は五秒間黙った。「正解だ。全部正解だ」――そう言って窓の外を三秒見たとき、勝也の口元は「よかった」と動いたように見えた。',
+    },
+    {
+      type: 'dialogue',
+      stage: [
+        { charId: 'satou', expression: 'tsumaru', position: 'left' },
+        { charId: 'mie', expression: 'sunao_hohoemi', position: 'right', dim: true },
+      ],
+      speaker: 'satou',
+      text: '……違って見えてるのに黙ってたら、三年間待ってたヘイカツに嘘ついてることになるだろ。――先回りして、うるさい。',
+    },
+    {
+      type: 'dialogue',
+      bg: 'bg_terachi_stream',
+      bgm: 'bgm_stream_piano',
+      particleMood: 'stars',
+      stage: [
+        { charId: 'terachi', expression: 'konwaku_katamaru', position: 'center' },
+      ],
+      speaker: 'narrator',
+      text: 'そんな感動の直後――登録者千四百人の本質配信 #16に、倉石暁から過去最大級の怪文書「✝本質✝のグレートチェーン5段階モデル」が投下された！',
+      overlay: {
+        kind: 'paper',
+        header: '倉石暁・最新論文『✝本質✝のグレートチェーン』',
+        lines: [
+          '前-原✝本質✝（概念として存在しないが、ある）',
+          '　　↓',
+          '原✝本質✝ → ✝本質✝ → 亜✝本質✝ → 非✝本質✝',
+          '※例：クレープは美味しいが✝本質✝ではない。',
+          '　よってクレープは「亜✝本質✝」である。✝✝✝',
+        ],
+        footer: '寺地星フリーズ記録更新：15秒',
+      },
+      addBullet: TRUTH_BULLETS.great_chain_fallacy,
+      sfx: 'paper_flip',
+    },
+    {
+      type: 'dialogue',
+      stage: [
+        { charId: 'satou', expression: 'kao_ageta', position: 'left' },
+        { charId: 'terachi', expression: 'haishin_shinken', position: 'right' },
+      ],
+      addBullet: TRUTH_BULLETS.crepe_equality,
+      sfx: 'clue_get',
+      speaker: 'satou',
+      text: 'クレープが亜✝本質✝ってのは納得いかない。去年の文化祭のクレープ、うまかったぞ。',
+    },
+    {
+      type: 'dialogue',
+      stage: [
+        { charId: 'terachi', expression: 'maiku_no_ketsui', position: 'center' },
+      ],
+      speaker: 'terachi',
+      text: '……倉石。お前、何を言ってるんだ。十五秒も固まった借りを、ここで一気に論破してやる！',
+    },
+    {
+      type: 'debate',
+      id: 'debate_ep4',
+      title: 'ノンストップ✝本質✝議論 #04',
+      subtitle: '倉石の「グレートチェーン5段階モデル」を完全解体せよ！',
+      bg: 'bg_debate_void',
+      bgm: 'bgm_debate',
+      protagonist: 'terachi',
+      protagonistExpression: 'haishin_shinken',
+      startingBullets: [
+        'great_chain_fallacy',
+        'crepe_equality',
+        'satou_third_map',
+        'ground_never_forgets',
+      ],
+      rounds: [
+        {
+          id: 'd4_r1',
+          roundTitle: 'ROUND 1：「前-原✝本質✝」の無意味さを撃ち抜け！',
+          topicBanner: '「存在しないが、ある」最上位階層の循環矛盾を暴け！',
+          hint: '倉石が「前-原✝本質✝はまったく新しい上位概念だ」と言い張る箇所に、【前-原✝本質✝の循環矛盾】を撃ち込め！',
+          wrongHitLine: '寺地「そこじゃない……『前-原✝本質✝』の定義が結局✝本質✝と同じになっている矛盾を突こう！」',
+          statements: [
+            {
+              id: 's4_1_1',
+              speaker: 'kuraishi',
+              expression: 'nekkyou',
+              segments: [{ text: '原✝本質✝のさらに前に、概念としてすら存在しないが〈ある〉状態を発見しました！' }],
+              durationMs: 4600,
+              position: { topPct: 24, leftPct: 12, rotateDeg: -2 },
+              pressResponse: {
+                protagonistLine: '寺地「待って、概念として存在しないのに〈ある〉って……それ、ただの✝本質✝の定義じゃない？」',
+                targetReply: '倉石「いいえ！ 五段階の階層構造にしたことで革命的進化を遂げたのです！」',
+                targetExpression: 'hokorashige',
+                extraHint: '次に出る倉石の発言に【前-原✝本質✝の循環矛盾】を撃ち込め！',
+              },
+            },
+            {
+              id: 's4_1_2',
+              speaker: 'kuraishi',
+              expression: 'hokorashige',
+              segments: [
+                { text: 'よって『前-原✝本質✝』は、' },
+                { text: '従来の✝本質✝とは完全に別次元の上位概念なのです！', weakPointId: 'wp_pre_gen', emphasis: 'loud' },
+              ],
+              durationMs: 5600,
+              position: { topPct: 48, leftPct: 22, rotateDeg: 2.5 },
+              pressResponse: {
+                protagonistLine: '両馬「五段階に分けて結局元の✝本質✝に戻ってて草」',
+                targetReply: '倉石「教祖まで！？ い、いや、断じて別次元です！」',
+                targetExpression: 'kotoba_ushinau',
+              },
+            },
+            {
+              id: 's4_1_3',
+              speaker: 'meshino',
+              expression: 'eigo_doya',
+              segments: [{ text: 'ちなみに人妻の指輪の二項対立について英語で追加考察を――' }],
+              durationMs: 3800,
+              position: { topPct: 68, leftPct: 14, rotateDeg: -1.5 },
+              pressResponse: {
+                protagonistLine: '寺地「召野くん、今は二項対立を持ち出さないで！ 論文配信になっちゃうから！」',
+                targetReply: '召野「すまん、つい熱いパッションが……！」',
+                targetExpression: 'shinken',
+              },
+            },
+          ],
+          solution: {
+            weakPointId: 'wp_pre_gen',
+            bulletId: 'great_chain_fallacy',
+            cutInText: '同じじゃん！！',
+            cutInSubtext: 'グレートチェーン最上位階層・即座に崩壊！',
+            cutInSpeaker: 'terachi',
+            cutInExpression: 'haishin_shinken',
+            breakdownLines: [
+              {
+                type: 'dialogue',
+                speaker: 'terachi',
+                stage: [
+                  { charId: 'kuraishi', expression: 'kotoba_ushinau', position: 'left', dim: true },
+                  { charId: 'terachi', expression: 'haishin_shinken', position: 'right' },
+                ],
+                text: '「何もないけどある」って――それ✝本質✝そのものじゃん！ 五段階に分けてぐるっと回って元に戻っただけだよ！',
+              },
+              {
+                type: 'dialogue',
+                speaker: 'kuraishi',
+                stage: [
+                  { charId: 'kuraishi', expression: 'nekkyou', position: 'left' },
+                  { charId: 'terachi', expression: 'haishin_shinken', position: 'right', dim: true },
+                ],
+                text: 'ぐぬぬ……！ ならば下位階層はどうです！ ラーメンとクレープには厳然たる格差があるはずです！',
+              },
+            ],
+          },
+        },
+        {
+          id: 'd4_r2',
+          roundTitle: 'ROUND 2：「クレープは亜✝本質✝」差別を粉砕せよ！',
+          topicBanner: '✝本質✝に上下の階層などないことを宣言せよ！',
+          hint: '倉石が「クレープは下位の亜✝本質✝だ」と格付けする発言に、【クレープも✝本質✝（平等宣言）】をぶつけろ！',
+          wrongHitLine: '寺地「ちがう！ クレープを見下す倉石の階層論を【クレープも✝本質✝（平等宣言）】で撃ち抜こう！」',
+          statements: [
+            {
+              id: 's4_2_1',
+              speaker: 'satou',
+              expression: 'kao_ageta',
+              segments: [{ text: '去年の文化祭のクレープ、普通にうまかったぞ。' }],
+              durationMs: 4000,
+              position: { topPct: 24, leftPct: 14, rotateDeg: -1.5 },
+              pressResponse: {
+                protagonistLine: '零「砂糖がクレープの✝本質✝を主張してる。成長してるね」',
+                targetReply: '砂糖「成長してない。クレープがうまかっただけ」',
+                targetExpression: 'soppo',
+              },
+            },
+            {
+              id: 's4_2_2',
+              speaker: 'kuraishi',
+              expression: 'hokorashige',
+              segments: [
+                { text: '二郎系ラーメンこそ至高！ ' },
+                { text: 'クレープは格下の「亜✝本質✝」に過ぎません！', weakPointId: 'wp_crepe_tier', emphasis: 'loud' },
+              ],
+              durationMs: 5600,
+              position: { topPct: 48, leftPct: 22, rotateDeg: 2 },
+              pressResponse: {
+                protagonistLine: '寺地「去年の文化祭で僕らの出し物、クレープ屋に負けたよね！？」',
+                targetReply: '倉石「うっ……ですが階層がなければ秩序が……！」',
+                targetExpression: 'kotoba_ushinau',
+                extraHint: '【クレープも✝本質✝（平等宣言）】で「格下の『亜✝本質✝』に過ぎません！」を粉砕せよ！',
+              },
+            },
+          ],
+          solution: {
+            weakPointId: 'wp_crepe_tier',
+            bulletId: 'crepe_equality',
+            cutInText: '✝本質✝は平等だ！！',
+            cutInSubtext: '寺地星・自覚なき名言炸裂！',
+            cutInSpeaker: 'terachi',
+            cutInExpression: 'maiku_no_ketsui',
+            partnerSpeaker: 'satou',
+            partnerExpression: 'hohoemi',
+            breakdownLines: [
+              {
+                type: 'dialogue',
+                speaker: 'terachi',
+                stage: [
+                  { charId: 'kuraishi', expression: 'kotoba_ushinau', position: 'left', dim: true },
+                  { charId: 'terachi', expression: 'maiku_no_ketsui', position: 'right' },
+                ],
+                text: '階層を作るな！ ラーメンもクレープもコーンスープも、全部同じ✝本質✝なんだよ！ ✝本質✝は平等だ！！ ……あれ、俺いま良いこと言った？',
+              },
+              {
+                type: 'dialogue',
+                speaker: 'kuraishi',
+                stage: [
+                  { charId: 'kuraishi', expression: 'kotoba_ushinau', position: 'left' },
+                  { charId: 'mie', expression: 'reishou', position: 'right', dim: true },
+                ],
+                text: '……グレートチェーンが、一瞬で崩壊しました……。寺地先輩の教えを胸に、モデルを修正します！',
+              },
+              {
+                type: 'dialogue',
+                speaker: 'mie',
+                stage: [
+                  { charId: 'kuraishi', expression: 'kotoba_ushinau', position: 'left', dim: true },
+                  { charId: 'mie', expression: 'iradachi_shinken', position: 'right' },
+                ],
+                text: '修正するな、モデルごと捨てろ。',
+              },
+            ],
+          },
+        },
+      ],
+      victoryLines: [
+        {
+          type: 'dialogue',
+          bg: 'bg_suiko_lake',
+          bgm: 'bgm_classroom',
+          particleMood: 'dust',
+          stage: [
+            { charId: 'rei', expression: 'hohoemi', position: 'left' },
+            { charId: 'terachi', expression: 'ureshii', position: 'right' },
+          ],
+          speaker: 'rei',
+          text: '五月、翠湖十キロマラソン。――直接は見えないけど、等高線を読むと地形が見えるように、✝本質✝もサインを読むと存在がわかるんだよ。三重の「は？」も、寺地の配信も、全部サインだね。',
+        },
+        {
+          type: 'dialogue',
+          bg: 'bg_classroom_sunset',
+          bgm: 'bgm_emotional',
+          stage: [
+            { charId: 'ryoma', expression: 'shonbori', position: 'left' },
+            { charId: 'mie', expression: 'honki_shinken', position: 'right' },
+          ],
+          addBullet: TRUTH_BULLETS.feikatsu_regret,
+          sfx: 'clue_get',
+          speaker: 'narrator',
+          text: '六月、球技大会のバスケ。残り三十秒、同点。三重は確実な零ではなく両馬へパスを出し――シュートは外れ、二点差で負けた。「理屈じゃない、お前が打つべきだと思った」。',
+        },
+        {
+          type: 'dialogue',
+          stage: [
+            { charId: 'ryoma', expression: 'shinken_ketsui', position: 'left' },
+            { charId: 'mie', expression: 'sunao_hohoemi', position: 'right', dim: true },
+          ],
+          speaker: 'ryoma',
+          text: '……三年で一番悔しい。✝本質✝じゃなくて、普通に悔しい。――✝本質✝の外側にも、大事なもんがあるんだな。',
+        },
+      ],
+    },
+    {
+      type: 'chapter_end',
+      chapterId: 4,
+      nextChapterId: 5,
+      summaryTitle: '第4話・完『フェイカツ・グレートチェーン・二年半越しの挙手』',
+      summaryQuote: '「同じものを出して、待つ。三年待てる教師がいる。」',
+      almanacUnlockNote: '砂糖東洋の挙手記録＆『✝本質✝年鑑』統計データが解放されました！ いよいよ最終話へ――',
+    },
+  ],
+};

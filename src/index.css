@@ -1,0 +1,162 @@
+@import "tailwindcss";
+@import "@fontsource/shippori-mincho/400.css";
+@import "@fontsource/shippori-mincho/600.css";
+@import "@fontsource/shippori-mincho/800.css";
+@import "@fontsource/zen-kaku-gothic-new/400.css";
+@import "@fontsource/zen-kaku-gothic-new/500.css";
+@import "@fontsource/zen-kaku-gothic-new/700.css";
+@import "@fontsource/dela-gothic-one/400.css";
+@import "@fontsource/yusei-magic/400.css";
+
+@layer base {
+  :root {
+    --font-sans: "Zen Kaku Gothic New", "Hiragino Kaku Gothic ProN", "Yu Gothic", sans-serif;
+    --font-serif: "Shippori Mincho", "Hiragino Mincho ProN", "Yu Mincho", serif;
+    --font-impact: "Dela Gothic One", "Zen Kaku Gothic New", sans-serif;
+    --font-marker: "Yusei Magic", "Zen Kaku Gothic New", cursive;
+  }
+
+  html,
+  body,
+  #root {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    font-family: var(--font-sans);
+    background-color: #07070d;
+    color: #f8fafc;
+    user-select: none;
+  }
+}
+
+.font-serif-jp {
+  font-family: var(--font-serif);
+}
+
+.font-impact-jp {
+  font-family: var(--font-impact);
+}
+
+.font-marker-jp {
+  font-family: var(--font-marker);
+}
+
+/* Kenney external 9-slice Fantasy UI Border styling */
+.kenney-border-ornate {
+  border-style: solid;
+  border-width: 14px;
+  border-image-source: url("/assets/ui/panel-border-015.png");
+  border-image-slice: 16;
+  border-image-repeat: round;
+}
+
+.kenney-border-sleek {
+  border-style: solid;
+  border-width: 12px;
+  border-image-source: url("/assets/ui/panel-border-007.png");
+  border-image-slice: 14;
+  border-image-repeat: round;
+}
+
+.kenney-border-scifi {
+  border-style: solid;
+  border-width: 14px;
+  border-image-source: url("/assets/ui/glassPanel_corners.png");
+  border-image-slice: 18;
+  border-image-repeat: stretch;
+}
+
+/* Topographic subtle grid pattern */
+.topo-grid-bg {
+  background-image:
+    radial-gradient(circle at 20% 20%, rgba(190, 24, 93, 0.14), transparent 45%),
+    radial-gradient(circle at 80% 75%, rgba(14, 165, 233, 0.12), transparent 45%),
+    linear-gradient(rgba(255, 255, 255, 0.025) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.025) 1px, transparent 1px);
+  background-size: 100% 100%, 100% 100%, 36px 36px, 36px 36px;
+}
+
+/* Speedlines overlay for Ace Attorney / Danganronpa cut-ins */
+.speedlines-bg {
+  background: repeating-conic-gradient(
+    from 0deg at 50% 50%,
+    rgba(255, 255, 255, 0.22) 0deg 2deg,
+    transparent 2deg 9deg
+  );
+  animation: spinSlow 14s linear infinite;
+}
+
+@keyframes spinSlow {
+  from {
+    transform: rotate(0deg) scale(1.8);
+  }
+  to {
+    transform: rotate(360deg) scale(1.8);
+  }
+}
+
+/* Standing portrait subtle breathing idle (authentic VN feel, NOT movement) */
+@keyframes portraitBreathe {
+  0%,
+  100% {
+    transform: translateY(0px) scale(1);
+  }
+  50% {
+    transform: translateY(-2.5px) scale(1.003);
+  }
+}
+
+.portrait-breathe {
+  animation: portraitBreathe 5.2s ease-in-out infinite;
+}
+
+/* Weak point pulse glow in Nonstop Debate */
+@keyframes weakPointPulse {
+  0%,
+  100% {
+    text-shadow:
+      0 0 12px rgba(251, 191, 36, 0.9),
+      0 0 28px rgba(244, 63, 94, 0.65),
+      2px 2px 0px #000;
+  }
+  50% {
+    text-shadow:
+      0 0 22px rgba(254, 240, 138, 1),
+      0 0 42px rgba(244, 63, 94, 0.95),
+      2px 2px 0px #000;
+  }
+}
+
+.weak-point-text {
+  animation: weakPointPulse 1.3s ease-in-out infinite;
+}
+
+/* Subtle scanline for livestream & BBS screens */
+.crt-scanlines {
+  background: linear-gradient(
+    to bottom,
+    rgba(255, 255, 255, 0),
+    rgba(255, 255, 255, 0) 50%,
+    rgba(0, 0, 0, 0.14) 50%,
+    rgba(0, 0, 0, 0.14)
+  );
+  background-size: 100% 4px;
+}
+
+/* Custom slim scrollbar for modals/chat/backlog */
+.custom-scroll::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+.custom-scroll::-webkit-scrollbar-track {
+  background: rgba(15, 23, 42, 0.5);
+}
+.custom-scroll::-webkit-scrollbar-thumb {
+  background: rgba(244, 63, 94, 0.55);
+  border-radius: 9999px;
+}
+.custom-scroll::-webkit-scrollbar-thumb:hover {
+  background: rgba(244, 63, 94, 0.85);
+}
